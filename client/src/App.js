@@ -1,14 +1,13 @@
-import React from "react";
-// import {BrowserRouter , Routes , Route } from 'react-router-dom'
-import Home from "./Pages/Home";
-// import {Box} from '@mui/material';
-// import Navbar from "./Components/Navbar";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './Pages/Home';
 
-
-function App() {
+export default function App() {
   return (
-    <Home/>
+    <Router basename="/SwaSarjan">
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+      </Routes>
+    </Router>
   );
 }
-
-export default App;
